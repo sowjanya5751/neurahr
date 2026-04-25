@@ -1,113 +1,183 @@
-# NeuraHR — AI-Powered HRMS
+# ⚡ NeuraHR — AI-Powered HR Management System
 
-> Next-generation Human Resource Management System powered by Google Gemini AI
+<div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black)](https://neurahr.vercel.app)
-[![API Docs](https://img.shields.io/badge/API%20Docs-Swagger-green)](https://neurahr-backend.onrender.com/docs)
+**Screen resumes in seconds. Answer HR queries instantly. Manage your team intelligently.**
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-7c3aed?style=for-the-badge)](https://neurahr-c0872eo3v-sowjanya5751s-projects.vercel.app)
+[![API Docs](https://img.shields.io/badge/📖_API_Docs-Swagger_UI-059669?style=for-the-badge)](https://neurahr-api.onrender.com/docs)
+[![Built With](https://img.shields.io/badge/AI-Groq_LLaMA_3-f59e0b?style=for-the-badge)](https://groq.com)
+
+> 🏆 **Submission for FWC IT Services AI/ML Fullstack Hackathon 2026**
+> Theme: *Build the Future of HR Management with AI-Powered Solutions*
+
+</div>
 
 ---
 
-## 🚀 Live Links
+## 🎬 Demo Video
 
-| Service | URL |
+> 📹 **[Watch 2-min Demo on Loom](https://www.loom.com/share/3b4e096bdada4ec99f9a606febeb4875)** — See AI resume screening + chatbot in action
+
+---
+## 📸 Screenshots
+
+### Resume Screener
+![Resume Screener](./screenshots/screener.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+---
+
+## 🌐 Live Links
+
+| | URL |
 |---|---|
-| Frontend | https://neurahr.vercel.app |
-| Backend API | https://neurahr-backend.onrender.com |
-| API Docs | https://neurahr-backend.onrender.com/docs |
+| 🖥️ **Frontend** | https://neurahr-c0872eo3v-sowjanya5751s-projects.vercel.app |
+| ⚙️ **Backend API** | https://neurahr-api.onrender.com |
+| 📖 **Swagger Docs** | https://neurahr-api.onrender.com/docs |
 
 ---
 
-## 🎯 Features
+## 🔑 Demo — Log In Instantly
 
-### ⭐ AI Resume Screener
-- Upload any PDF resume
-- Paste a job description
-- Gemini AI returns:
-  - Match score (0–100)
-  - Recommendation: Hire / Consider / Reject
-  - Skills matched & missing
-  - Strengths & weaknesses
-  - 3 interview questions
+No signup needed. Use any of these pre-seeded accounts:
 
-### 💬 HR Chatbot
-- Powered by Google Gemini
-- Answers HR policy questions instantly
-- Knows: leave policy, WFH rules, payroll dates, insurance, and more
-- Context-aware conversation history
+| Role | Email | Password | What You Can Do |
+|------|-------|----------|-----------------|
+| 👑 **Admin** | admin@neurahr.com | Admin123 | Everything — dashboard, screening, employees, chatbot |
+| 👥 **HR** | hr@neurahr.com | Hr123456 | Screen resumes, view results, use chatbot |
+| 📊 **Manager** | manager@neurahr.com | Mgr12345 | HR chatbot access |
+| 👤 **Employee** | employee@neurahr.com | Emp12345 | HR chatbot access |
 
-### 🔐 JWT Authentication
-- 4 roles: Admin, HR Recruiter, Manager, Employee
-- Role-based route protection
-- Secure JWT tokens (24hr expiry)
+---
 
-### 📊 Role-Based Dashboards
-- Each role sees a tailored dashboard
-- HR sees screening stats and quick actions
-- Employees see chatbot access and info
+## ✨ What It Does
+
+### 🤖 AI Resume Screener — *The Star Feature*
+Upload any PDF resume + paste a job description. Groq LLaMA-3 returns in seconds:
+- **Match Score** — 0 to 100 with animated ring visualization
+- **Recommendation** — Hire / Consider / Reject with color coding
+- **Skills Matched & Missing** — visual chip tags
+- **Strengths & Weaknesses** — detailed breakdown
+- **3 Interview Questions** — auto-generated and role-specific
+- **Download Report** — one-click PDF export for HR records
+
+### 💬 HR Policy Chatbot
+Ask anything in plain English. Instant answers about:
+leave policy · WFH rules · payroll dates · medical insurance · notice period · referral bonus · performance reviews
+
+### 📊 Admin Dashboard
+- Animated stat cards with live counts
+- Donut chart — Hire / Consider / Reject breakdown
+- Real numbers pulled from actual screening history
+
+### 👥 Employee Management
+- Searchable employee table with role badges
+- Add new employees with role assignment
+- Avatar initials auto-generated per employee
+
+### 🔐 Role-Based Access Control
+4 roles with different permissions. Route guards on both frontend and backend. JWT tokens with 24hr expiry.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Frontend | React 18, TailwindCSS, Vite, React Router |
-| Backend | FastAPI, Python 3.10, SQLAlchemy |
-| Database | SQLite (dev) / PostgreSQL (prod) |
-| AI | Google Gemini 2.5 Flash |
-| Auth | JWT (python-jose), bcrypt |
-| Deploy | Vercel (frontend) + Render (backend) |
+| Layer | Technology | Why |
+|-------|-----------|-----|
+| **Frontend** | React 18 + Vite | Fast, modern, component-based |
+| **Backend** | FastAPI + Python | Async, auto-docs, production-ready |
+| **Database** | SQLite → PostgreSQL | Zero config dev, scalable prod |
+| **AI** | Groq API — LLaMA 3.3 70B | Free tier, high RPM, low latency |
+| **Auth** | JWT + bcrypt | Stateless, secure, role-aware |
+| **PDF** | pdfplumber | Reliable text extraction from any PDF |
+| **Deploy** | Vercel + Render | Free, fast, CI/CD on git push |
 
 ---
 
-## 🏗 Architecture
+## 🏗 System Architecture
 
 ```
-Browser (React + Vite)
-    │
-    ▼ REST API (JWT)
-FastAPI Backend
-    ├── /auth          → Register, Login, JWT
-    ├── /recruitment   → PDF Upload → Gemini → Score
-    └── /chatbot       → Message → Gemini → Reply
-    │
-    ├── SQLite / PostgreSQL DB
-    └── Google Gemini API
+┌─────────────────────────────────────────────────────────┐
+│                    USER BROWSER                         │
+│              React 18 + Vite (Vercel CDN)               │
+└──────────────────────┬──────────────────────────────────┘
+                       │ HTTPS + JWT
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│                  FASTAPI BACKEND                        │
+│                  (Render.com)                           │
+│                                                         │
+│  /auth          /recruitment        /chatbot            │
+│  Register       PDF Upload          Message             │
+│  Login          AI Screening        Suggestions         │
+│  JWT Guard      Results CRUD                            │
+└────────┬──────────────┬──────────────────┬─────────────┘
+         │              │                  │
+         ▼              ▼                  ▼
+  ┌──────────┐   ┌──────────────┐   ┌──────────────┐
+  │  SQLite  │   │  Groq API    │   │  pdfplumber  │
+  │ /Postgres│   │  LLaMA-3 70B │   │  PDF Parser  │
+  └──────────┘   └──────────────┘   └──────────────┘
 ```
 
 ---
 
-## 👤 Demo Credentials
+## ⚡ Run Locally in 5 Minutes
 
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@neurahr.com | Admin123 |
-| HR Recruiter | hr@neurahr.com | Hr123456 |
-| Manager | manager@neurahr.com | Mgr12345 |
-| Employee | employee@neurahr.com | Emp12345 |
+### 1. Clone
+```bash
+git clone https://github.com/sowjanya5751/neurahr.git
+cd neurahr
+```
 
----
-
-## ⚙️ Local Setup
-
-### Backend
+### 2. Backend
 ```bash
 cd backend
 pip install -r requirements.txt
-cp .env.example .env
-# Add your GEMINI_API_KEY to .env
+```
+Create `backend/.env`:
+```
+GROQ_API_KEY=your_groq_key_from_console.groq.com
+JWT_SECRET=any_long_random_string_here
+DATABASE_URL=sqlite:///./neurahr.db
+```
+```bash
 uvicorn main:app --reload
-# API runs at http://localhost:8000
-# Swagger docs at http://localhost:8000/docs
+# → http://localhost:8000/docs
 ```
 
-### Frontend
+### 3. Frontend
 ```bash
 cd frontend
 npm install
-npm run dev
-# App runs at http://localhost:5173
 ```
+Create `frontend/.env`:
+```
+VITE_API_URL=http://localhost:8000
+```
+```bash
+npm run dev
+# → http://localhost:5173
+```
+
+---
+
+## 📡 API Reference
+
+| Method | Endpoint | Role | Description |
+|--------|----------|------|-------------|
+| `POST` | `/auth/register` | Public | Create account |
+| `POST` | `/auth/login` | Public | Login → JWT |
+| `GET` | `/auth/me` | Any | Current user |
+| `GET` | `/auth/users` | Admin | All users |
+| `POST` | `/recruitment/screen` | HR/Admin | AI resume screen |
+| `GET` | `/recruitment/results` | HR/Admin | All results |
+| `DELETE` | `/recruitment/results/{id}` | Admin | Delete result |
+| `POST` | `/chatbot/message` | Any | Chat message |
+| `GET` | `/chatbot/suggestions` | Any | Suggested Qs |
 
 ---
 
@@ -117,59 +187,52 @@ npm run dev
 neurahr/
 ├── backend/
 │   ├── api/
-│   │   ├── auth.py            # JWT login/register
-│   │   ├── recruitment.py     # ⭐ Resume screener
+│   │   ├── auth.py            # JWT auth, 4 roles
+│   │   ├── recruitment.py     # ⭐ AI resume screening
 │   │   └── chatbot.py         # ⭐ HR chatbot
-│   ├── models/
-│   │   └── models.py          # DB tables
+│   ├── models/models.py       # SQLAlchemy ORM
 │   ├── services/
-│   │   ├── gemini.py          # Gemini API calls
-│   │   └── resume_parser.py   # PDF text extraction
+│   │   ├── groq_service.py          # Groq LLaMA integration
+│   │   └── resume_parser.py   # PDF → text
 │   ├── database.py
+│   ├── seed.py                # Demo accounts
 │   ├── main.py
-│   ├── seed.py
 │   └── requirements.txt
-└── frontend/
-    └── src/
-        ├── pages/
-        │   ├── auth/Login.jsx
-        │   ├── dashboard/Dashboard.jsx
-        │   └── hr/
-        │       ├── ResumeScreener.jsx  # ⭐
-        │       └── Chatbot.jsx         # ⭐
-        ├── components/
-        │   ├── Navbar.jsx
-        │   └── ProtectedRoute.jsx
-        ├── context/AuthContext.jsx
-        └── services/api.js
+└── frontend/src/
+    ├── pages/
+    │   ├── auth/Login.jsx
+    │   ├── dashboard/Dashboard.jsx
+    │   ├── hr/ResumeScreener.jsx  # ⭐
+    │   ├── hr/Chatbot.jsx         # ⭐
+    │   ├── hr/Employees.jsx
+    │   └── NotFound.jsx
+    ├── components/
+    │   ├── Navbar.jsx
+    │   └── ProtectedRoute.jsx
+    ├── context/
+    │   ├── AuthContext.jsx
+    │   └── ToastContext.jsx
+    └── services/api.js
 ```
 
 ---
 
-## 🔌 API Reference
+## 🎯 Key Design Decisions
 
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | /auth/register | No | Register new user |
-| POST | /auth/login | No | Login → JWT token |
-| GET | /auth/me | Yes | Get current user |
-| GET | /auth/users | Admin | List all users |
-| POST | /recruitment/screen | HR/Admin | Screen resume with AI |
-| GET | /recruitment/results | HR/Admin | List all screenings |
-| GET | /recruitment/results/{id} | HR/Admin | Get screening detail |
-| POST | /chatbot/message | All | Send chat message |
-| GET | /chatbot/suggestions | All | Get suggested questions |
+| Decision | Reason |
+|----------|--------|
+| Groq over OpenAI/Groq | Free tier, no quota issues, faster response |
+| SQLite for dev | Zero config, judges can run locally in seconds |
+| Hardcoded HR policies in chatbot | Makes responses feel real, not generic |
+| 4 demo accounts pre-seeded | Judges can instantly explore every role |
+| Role guards on frontend + backend | Production-grade security, not just UI-level |
 
 ---
 
-## 🏆 Built For
+<div align="center">
 
-FWC IT Services Pvt. Ltd. — AI/ML Fullstack Hackathon 2026
-Theme: Build the Future of HR Management with AI-Powered Solutions
+**Built by R. Sowjanya** · BTech AI & ML, MS Ramaiah University · CGPA 8.6
 
----
+*"A beautiful, reliable 2-feature app beats a broken 6-feature app every time."*
 
-## 👩‍💻 Developer
-
-**R. Sowjanya** — AI/ML Full Stack Developer
-BTech AI & ML, MS Ramaiah University | CGPA 8.6
+</div>
