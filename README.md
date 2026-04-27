@@ -2,13 +2,14 @@
 
 <div align="center">
 
-**Screen resumes in seconds. Answer HR queries instantly. Manage your team intelligently.**
+**The complete AI-powered HRMS — built for the future of work.**
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-7c3aed?style=for-the-badge)](https://neurahr-c0872eo3v-sowjanya5751s-projects.vercel.app)
 [![API Docs](https://img.shields.io/badge/📖_API_Docs-Swagger_UI-059669?style=for-the-badge)](https://neurahr-api.onrender.com/docs)
-[![Built With](https://img.shields.io/badge/AI-Groq_LLaMA_3-f59e0b?style=for-the-badge)](https://groq.com)
+[![AI Powered](https://img.shields.io/badge/AI-Groq_LLaMA_3.3_70B-f59e0b?style=for-the-badge)](https://groq.com)
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel_+_Render-000000?style=for-the-badge)](https://vercel.com)
 
-> 🏆 **Submission for FWC IT Services AI/ML Fullstack Hackathon 2026**
+> 🏆 **FWC IT Services AI/ML Fullstack Hackathon 2026**
 > Theme: *Build the Future of HR Management with AI-Powered Solutions*
 
 </div>
@@ -17,16 +18,7 @@
 
 ## 🎬 Demo Video
 
-> 📹 **[Watch 2-min Demo on Loom](https://www.loom.com/share/3b4e096bdada4ec99f9a606febeb4875)** — See AI resume screening + chatbot in action
-
----
-## 📸 Screenshots
-
-### Resume Screener
-![Resume Screener](./screenshots/screener.png)
-
-### Dashboard
-![Dashboard](./screenshots/dashboard.png)
+> 📹 **[Watch Full Demo on Loom](https://www.loom.com/share/3b4e096bdada4ec99f9a606febeb4875)** — AI resume screening, voice chatbot, and complete HRMS walkthrough
 
 ---
 
@@ -42,44 +34,68 @@
 
 ## 🔑 Demo — Log In Instantly
 
-No signup needed. Use any of these pre-seeded accounts:
+No signup needed. 4 pre-seeded accounts ready to use:
 
-| Role | Email | Password | What You Can Do |
-|------|-------|----------|-----------------|
-| 👑 **Admin** | admin@neurahr.com | Admin123 | Everything — dashboard, screening, employees, chatbot |
-| 👥 **HR** | hr@neurahr.com | Hr123456 | Screen resumes, view results, use chatbot |
-| 📊 **Manager** | manager@neurahr.com | Mgr12345 | HR chatbot access |
-| 👤 **Employee** | employee@neurahr.com | Emp12345 | HR chatbot access |
+| Role | Email | Password | Access |
+|------|-------|----------|--------|
+| 👑 **Admin** | admin@neurahr.com | Admin123 | Full access — all 12 features |
+| 👥 **HR** | hr@neurahr.com | Hr123456 | AI screening, JD generator, reviews, search |
+| 📊 **Manager** | manager@neurahr.com | Mgr12345 | Performance reviews, leaves, attendance |
+| 👤 **Employee** | employee@neurahr.com | Emp12345 | Leaves, payroll, attendance, voice chatbot |
 
 ---
 
-## ✨ What It Does
+## 📸 Screenshots
 
-### 🤖 AI Resume Screener — *The Star Feature*
-Upload any PDF resume + paste a job description. Groq LLaMA-3 returns in seconds:
-- **Match Score** — 0 to 100 with animated ring visualization
-- **Recommendation** — Hire / Consider / Reject with color coding
-- **Skills Matched & Missing** — visual chip tags
-- **Strengths & Weaknesses** — detailed breakdown
-- **3 Interview Questions** — auto-generated and role-specific
-- **Download Report** — one-click PDF export for HR records
+### 🔐 Login
+![Login](./screenshots/login.png)
 
-### 💬 HR Policy Chatbot
-Ask anything in plain English. Instant answers about:
-leave policy · WFH rules · payroll dates · medical insurance · notice period · referral bonus · performance reviews
+### 📊 Admin Dashboard — with live stats and donut chart
+![Dashboard](./screenshots/dashboard.png)
 
-### 📊 Admin Dashboard
-- Animated stat cards with live counts
-- Donut chart — Hire / Consider / Reject breakdown
-- Real numbers pulled from actual screening history
+### 🤖 AI Resume Screener — score ring + skill chips
+![Resume Screener](./screenshots/screener.png)
 
-### 👥 Employee Management
-- Searchable employee table with role badges
-- Add new employees with role assignment
-- Avatar initials auto-generated per employee
+### 🎤 AI Voice Chatbot
+![Voice Chatbot](./screenshots/voice.png)
 
-### 🔐 Role-Based Access Control
-4 roles with different permissions. Route guards on both frontend and backend. JWT tokens with 24hr expiry.
+### 📅 Leave Management
+![Leave Management](./screenshots/leaves.png)
+
+### 💰 Payroll Dashboard
+![Payroll](./screenshots/payroll.png)
+
+---
+
+## ✨ Complete Feature List
+
+### 🤖 6 AI-Powered Features
+
+| Feature | Description |
+|---------|-------------|
+| **AI Resume Screener** | Upload PDF → match score, recommendation, skill gaps, interview questions |
+| **AI HR Chatbot** | Text-based Q&A on all company HR policies |
+| **🎤 AI Voice Assistant** | Speak your HR questions — real-time speech-to-text + text-to-speech |
+| **AI JD Generator** | Enter job title → get full professional job description in seconds |
+| **AI Performance Review** | Paste manager notes → get structured review with score, strengths, goals |
+| **🔍 AI Smart Search** | Search employees and screenings using natural language queries |
+
+### 🏢 Core HRMS Features
+
+| Feature | Description |
+|---------|-------------|
+| **Attendance Tracker** | Clock in/out, live timer, monthly log, attendance % |
+| **Payroll Management** | Salary breakdown, payslip history, downloadable payslips |
+| **Performance Tracking** | Goals, quarterly scores, trend chart, add new goals |
+| **Leave Management** | Apply for leave, manager approval/rejection, balance tracker |
+| **Employee Management** | Searchable table, add employees, role assignment |
+| **My Profile** | Personal info, HR policies, work details per user |
+
+### 🔐 Security & Access
+- JWT authentication with 24hr expiry
+- 4 role-based access levels (Admin / HR / Manager / Employee)
+- Route guards on both frontend and backend
+- Password hashing with bcrypt
 
 ---
 
@@ -87,40 +103,44 @@ leave policy · WFH rules · payroll dates · medical insurance · notice period
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| **Frontend** | React 18 + Vite | Fast, modern, component-based |
-| **Backend** | FastAPI + Python | Async, auto-docs, production-ready |
-| **Database** | SQLite → PostgreSQL | Zero config dev, scalable prod |
-| **AI** | Groq API — LLaMA 3.3 70B | Free tier, high RPM, low latency |
-| **Auth** | JWT + bcrypt | Stateless, secure, role-aware |
-| **PDF** | pdfplumber | Reliable text extraction from any PDF |
-| **Deploy** | Vercel + Render | Free, fast, CI/CD on git push |
+| **Frontend** | React 18 + Vite | Fast, modern, zero config |
+| **Backend** | FastAPI + Python 3.10 | Async, auto Swagger docs |
+| **Database** | SQLite (dev) / PostgreSQL (prod) | Zero setup locally |
+| **AI** | Groq API — LLaMA 3.3 70B | Free, fast, high RPM |
+| **Voice** | Web Speech API | Native browser, no extra cost |
+| **Auth** | JWT + bcrypt | Stateless, secure |
+| **PDF** | pdfplumber | Reliable text extraction |
+| **Deploy** | Vercel + Render | CI/CD on every git push |
 
 ---
 
 ## 🏗 System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    USER BROWSER                         │
-│              React 18 + Vite (Vercel CDN)               │
-└──────────────────────┬──────────────────────────────────┘
-                       │ HTTPS + JWT
-                       ▼
-┌─────────────────────────────────────────────────────────┐
-│                  FASTAPI BACKEND                        │
-│                  (Render.com)                           │
-│                                                         │
-│  /auth          /recruitment        /chatbot            │
-│  Register       PDF Upload          Message             │
-│  Login          AI Screening        Suggestions         │
-│  JWT Guard      Results CRUD                            │
-└────────┬──────────────┬──────────────────┬─────────────┘
-         │              │                  │
-         ▼              ▼                  ▼
-  ┌──────────┐   ┌──────────────┐   ┌──────────────┐
-  │  SQLite  │   │  Groq API    │   │  pdfplumber  │
-  │ /Postgres│   │  LLaMA-3 70B │   │  PDF Parser  │
-  └──────────┘   └──────────────┘   └──────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                     USER BROWSER                             │
+│         React 18 + Vite — Deployed on Vercel CDN             │
+│                                                              │
+│  Login → Dashboard → AI Screener → Voice Bot → Payroll ...  │
+└─────────────────────────┬────────────────────────────────────┘
+                          │ HTTPS + JWT Bearer Token
+                          ▼
+┌──────────────────────────────────────────────────────────────┐
+│                   FASTAPI BACKEND                            │
+│                   Render.com (Free tier)                     │
+│                                                              │
+│  /auth          /recruitment    /chatbot    /ai              │
+│  ├─ register    ├─ screen       ├─ message  ├─ generate-jd   │
+│  ├─ login       ├─ results      └─ suggest  ├─ performance   │
+│  ├─ me          └─ delete                   └─ smart-search  │
+│  └─ users                                                    │
+└──────┬──────────────┬──────────────┬──────────────┬─────────┘
+       │              │              │              │
+       ▼              ▼              ▼              ▼
+ ┌──────────┐  ┌───────────┐  ┌──────────┐  ┌──────────┐
+ │ SQLite/  │  │ Groq API  │  │pdfplumb  │  │Web Speech│
+ │ Postgres │  │LLaMA 3 70B│  │   er     │  │   API    │
+ └──────────┘  └───────────┘  └──────────┘  └──────────┘
 ```
 
 ---
@@ -139,14 +159,16 @@ cd backend
 pip install -r requirements.txt
 ```
 Create `backend/.env`:
-```
+```env
+# Get free key from: https://console.groq.com → API Keys → Create API Key
 GROQ_API_KEY=your_groq_key_from_console.groq.com
 JWT_SECRET=any_long_random_string_here
 DATABASE_URL=sqlite:///./neurahr.db
 ```
 ```bash
 uvicorn main:app --reload
-# → http://localhost:8000/docs
+# → http://localhost:8000
+# → http://localhost:8000/docs  (Swagger UI)
 ```
 
 ### 3. Frontend
@@ -155,7 +177,7 @@ cd frontend
 npm install
 ```
 Create `frontend/.env`:
-```
+```env
 VITE_API_URL=http://localhost:8000
 ```
 ```bash
@@ -165,19 +187,22 @@ npm run dev
 
 ---
 
-## 📡 API Reference
+## 📡 Full API Reference
 
 | Method | Endpoint | Role | Description |
 |--------|----------|------|-------------|
 | `POST` | `/auth/register` | Public | Create account |
-| `POST` | `/auth/login` | Public | Login → JWT |
-| `GET` | `/auth/me` | Any | Current user |
-| `GET` | `/auth/users` | Admin | All users |
-| `POST` | `/recruitment/screen` | HR/Admin | AI resume screen |
-| `GET` | `/recruitment/results` | HR/Admin | All results |
-| `DELETE` | `/recruitment/results/{id}` | Admin | Delete result |
-| `POST` | `/chatbot/message` | Any | Chat message |
-| `GET` | `/chatbot/suggestions` | Any | Suggested Qs |
+| `POST` | `/auth/login` | Public | Login → JWT token |
+| `GET` | `/auth/me` | Any | Current user info |
+| `GET` | `/auth/users` | Admin | List all users |
+| `POST` | `/recruitment/screen` | HR/Admin | AI resume screening |
+| `GET` | `/recruitment/results` | HR/Admin | All screening results |
+| `DELETE` | `/recruitment/results/{id}` | Admin | Delete a result |
+| `POST` | `/chatbot/message` | Any | Send chat message |
+| `GET` | `/chatbot/suggestions` | Any | Get suggested questions |
+| `POST` | `/ai/generate-jd` | HR/Admin | Generate job description |
+| `POST` | `/ai/performance-review` | Manager+ | Generate performance review |
+| `POST` | `/ai/smart-search` | HR/Admin | Natural language search |
 
 ---
 
@@ -187,24 +212,35 @@ npm run dev
 neurahr/
 ├── backend/
 │   ├── api/
-│   │   ├── auth.py            # JWT auth, 4 roles
-│   │   ├── recruitment.py     # ⭐ AI resume screening
-│   │   └── chatbot.py         # ⭐ HR chatbot
-│   ├── models/models.py       # SQLAlchemy ORM
+│   │   ├── auth.py              # JWT auth, 4 roles
+│   │   ├── recruitment.py       # ⭐ AI resume screening
+│   │   ├── chatbot.py           # ⭐ HR chatbot
+│   │   └── ai_features.py       # ⭐ JD gen, perf review, smart search
+│   ├── models/models.py         # SQLAlchemy ORM
 │   ├── services/
-│   │   ├── groq_service.py          # Groq LLaMA integration
-│   │   └── resume_parser.py   # PDF → text
+│   │   ├── gemini.py            # Groq LLaMA integration
+│   │   └── resume_parser.py     # PDF → text extraction
 │   ├── database.py
-│   ├── seed.py                # Demo accounts
+│   ├── seed.py                  # Demo accounts seeder
 │   ├── main.py
 │   └── requirements.txt
 └── frontend/src/
     ├── pages/
     │   ├── auth/Login.jsx
     │   ├── dashboard/Dashboard.jsx
-    │   ├── hr/ResumeScreener.jsx  # ⭐
-    │   ├── hr/Chatbot.jsx         # ⭐
-    │   ├── hr/Employees.jsx
+    │   ├── hr/
+    │   │   ├── ResumeScreener.jsx    # ⭐ AI feature
+    │   │   ├── Chatbot.jsx           # ⭐ AI feature
+    │   │   ├── VoiceChatbot.jsx      # ⭐ AI + Voice
+    │   │   ├── JDGenerator.jsx       # ⭐ AI feature
+    │   │   ├── PerformanceReview.jsx # ⭐ AI feature
+    │   │   ├── AISearch.jsx          # ⭐ AI feature
+    │   │   ├── Employees.jsx
+    │   │   ├── LeaveManagement.jsx
+    │   │   ├── Attendance.jsx
+    │   │   └── Payroll.jsx
+    │   ├── Profile.jsx
+    │   ├── PerformanceTracking.jsx
     │   └── NotFound.jsx
     ├── components/
     │   ├── Navbar.jsx
@@ -212,7 +248,8 @@ neurahr/
     ├── context/
     │   ├── AuthContext.jsx
     │   └── ToastContext.jsx
-    └── services/api.js
+    ├── services/api.js
+    └── index.css
 ```
 
 ---
@@ -221,18 +258,44 @@ neurahr/
 
 | Decision | Reason |
 |----------|--------|
-| Groq over OpenAI/Groq | Free tier, no quota issues, faster response |
-| SQLite for dev | Zero config, judges can run locally in seconds |
-| Hardcoded HR policies in chatbot | Makes responses feel real, not generic |
-| 4 demo accounts pre-seeded | Judges can instantly explore every role |
-| Role guards on frontend + backend | Production-grade security, not just UI-level |
+| Groq over OpenAI/Gemini | Free tier, no quota issues, 10x faster |
+| Web Speech API for voice | Zero cost, works natively in Chrome |
+| Inline styles over Tailwind | No build config, zero class conflicts |
+| SQLite for dev | Zero setup, judges can run in seconds |
+| Hardcoded HR policies | Makes chatbot feel like a real product |
+| 4 demo accounts pre-seeded | Judges explore every role instantly |
+| Fallback on all AI features | App never fully breaks even if AI quota hits |
+| Role guards frontend + backend | Production-grade, not just UI-level security |
+
+---
+
+## ✅ Hackathon Requirements Checklist
+
+| Requirement | Status |
+|-------------|--------|
+| At least 4 AI features | ✅ 6 AI features |
+| AI resume screening | ✅ |
+| Multi-role login (Admin, HR, Manager, Employee) | ✅ |
+| Personalized dashboards per role | ✅ |
+| Attendance management | ✅ |
+| Payroll management | ✅ |
+| Performance tracking | ✅ |
+| Leave management | ✅ |
+| Mobile responsive | ✅ |
+| Voice interaction | ✅ Web Speech API |
+| Deployed live | ✅ Vercel + Render |
+| README + architecture diagram | ✅ |
+| API documentation | ✅ Swagger UI |
+| Open source libraries only | ✅ |
+| Free tier APIs only | ✅ Groq free tier |
 
 ---
 
 <div align="center">
 
-**Built by R. Sowjanya** · BTech AI & ML, MS Ramaiah University · CGPA 8.6
+**Built by R. Sowjanya**
+BTech AI & ML · MS Ramaiah University of Applied Sciences · CGPA 8.6
 
-*"A beautiful, reliable 2-feature app beats a broken 6-feature app every time."*
+*12 features. 6 AI models. 4 roles. 1 deployed app.*
 
 </div>

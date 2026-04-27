@@ -5,7 +5,7 @@ from database import get_db
 from models.models import User, ScreeningResult
 from api.auth import get_current_user, require_role
 from services.resume_parser import extract_text_from_pdf
-from services.gemini import screen_resume
+from services.groq_service import screen_resume
 import json
 
 router = APIRouter()
