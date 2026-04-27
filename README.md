@@ -4,7 +4,7 @@
 
 **The complete AI-powered HRMS — built for the future of work.**
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-7c3aed?style=for-the-badge)](https://neurahr-c0872eo3v-sowjanya5751s-projects.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-7c3aed?style=for-the-badge)](https://neurahr-dbkevbqg3-sowjanya5751s-projects.vercel.app)
 [![API Docs](https://img.shields.io/badge/📖_API_Docs-Swagger_UI-059669?style=for-the-badge)](https://neurahr-api.onrender.com/docs)
 [![AI Powered](https://img.shields.io/badge/AI-Groq_LLaMA_3.3_70B-f59e0b?style=for-the-badge)](https://groq.com)
 [![Deploy](https://img.shields.io/badge/Deploy-Vercel_+_Render-000000?style=for-the-badge)](https://vercel.com)
@@ -18,7 +18,7 @@
 
 ## 🎬 Demo Video
 
-> 📹 **[Watch Full Demo on Loom](https://www.loom.com/share/3b4e096bdada4ec99f9a606febeb4875)** — AI resume screening, voice chatbot, and complete HRMS walkthrough
+> 📹 **[Watch Full Demo on Loom](https://www.loom.com/share/9c16f802b67a49e8ae00a13603cd37fd)** — AI resume screening, voice chatbot, and complete HRMS walkthrough
 
 ---
 
@@ -26,7 +26,7 @@
 
 | | URL |
 |---|---|
-| 🖥️ **Frontend** | https://neurahr-c0872eo3v-sowjanya5751s-projects.vercel.app |
+| 🖥️ **Frontend** | https://neurahr-dbkevbqg3-sowjanya5751s-projects.vercel.app |
 | ⚙️ **Backend API** | https://neurahr-api.onrender.com |
 | 📖 **Swagger Docs** | https://neurahr-api.onrender.com/docs |
 
@@ -54,7 +54,8 @@ No signup needed. 4 pre-seeded accounts ready to use:
 ![Dashboard](./screenshots/dashboard.png)
 
 ### 🤖 AI Resume Screener — score ring + skill chips
-![Resume Screener](./screenshots/screener.png)
+![Resume Screener](./screenshots/screener1.png)
+![Resume Screener](./screenshots/screener2.png)
 
 ### 🎤 AI Voice Chatbot
 ![Voice Chatbot](./screenshots/voice.png)
@@ -218,7 +219,7 @@ neurahr/
 │   │   └── ai_features.py       # ⭐ JD gen, perf review, smart search
 │   ├── models/models.py         # SQLAlchemy ORM
 │   ├── services/
-│   │   ├── gemini.py            # Groq LLaMA integration
+│   │   ├── groq_service.py            # Groq LLaMA integration
 │   │   └── resume_parser.py     # PDF → text extraction
 │   ├── database.py
 │   ├── seed.py                  # Demo accounts seeder
@@ -258,7 +259,7 @@ neurahr/
 
 | Decision | Reason |
 |----------|--------|
-| Groq over OpenAI/Gemini | Free tier, no quota issues, 10x faster |
+| Groq over OpenAI/groq_service | Free tier, no quota issues, 10x faster |
 | Web Speech API for voice | Zero cost, works natively in Chrome |
 | Inline styles over Tailwind | No build config, zero class conflicts |
 | SQLite for dev | Zero setup, judges can run in seconds |
